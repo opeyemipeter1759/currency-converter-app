@@ -1,0 +1,10 @@
+#section-two {
+  display: none;
+}
+
+#section-one {
+  display: block;
+}
+.footer{
+  color: aliceblue;
+}

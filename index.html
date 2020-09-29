@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Title</title>
+  </head>
+
+  <body class="bg-dark">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 mx-auto">
+          <div class="card card-body text-center mt-5">
+            <p class="h1 font-weight-bolder">Currency Converter</p>
+            <p>
+              <em>
+                Kindly note that all currency rates are converted using
+                <strong> NGN </strong> (Nigeria Naira) has the base parameter.</em
+              >
+            </p>
+            <section id="section-one">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div id="form-one" class="form-inline card" action="">
+                      <div class="card-body">
+                        <div class="form-group row">
+                          <div class="">
+                            <div class="col-2 col-md-2">
+                              <p>From:</p>
+                            </div>
+                            <div class="col-md-8 mb-2"></div>
+                          </div>
+                          <br />
+                          <select class="form-control my-1 mr-sm-2 col-md-4 select" id="currency1">
+                            <option value="NGN" selected data-amount="1">
+                              Naira
+                            </option>
+                            <option value="ZWD" data-amount="20.95">
+                              Zambian Kwacha
+                            </option>
+                            <option value="USD" data-amount="380.50">
+                              US Dollars
+                            </option>
+                            <option value="GBP" data-amount="484.95">
+                              Pounds Sterling
+                            </option>
+                          </select>
+                        </div>
+                        <div class="input-group mb-2 mr-sm-1 row">
+                          <input type="text" class="form-control" id="input" class="col-md-6" />
+                          <div class="col-md-6"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-inline card" method="" action="">
+                      <div class="card-body">
+                        <div class="form-group row">
+                          <div class="">
+                            <div class="col-2 col-md-2">
+                              <p>To:</p>
+                            </div>
+                            <div class="col-md-8 mb-2"></div>
+                          </div>
+                          <br />
+                          <div class="body"></div>
+                          <select class="form-control my-1 mr-sm-2 col-md-6 select" id="currency2">
+                            <option value="NGN" data-amount="1" selected>
+                              Naira
+                            </option>
+                            <option value="ZWD" data-amount="20.95">
+                              Zambian Kwacha
+                            </option>
+                            <option value="USD" data-amount="380.50">US Dollars</option>
+                            <option value="GBP" data-amount="484.95">
+                              Pounds Sterling
+                            </option>
+                          </select>
+                        </div>
+                        <div class="input-group mb-2 mr-sm-1 row">
+                          <input type="text" class="form-control" id="output" class="col-md-6" disabled />
+                          <div class="col-md-6"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <input type="submit" class="btn btn-primary col-md-4 mt-3 mb-3  " value="Calculate" onclick="calculate()" />
+                    <div class="col-md-3"> <p class="new-currency mt-3"> Will you want to  add a new currency? 👉🏾 </p> </div>
+                    <input class="btn btn-primary col-md-4 mt-3 mb-3"  value="Add New Currency" type="submit" onclick="newSectionVisibilty()"/>
+                  </div>
+                </div>
+            </section>
+
+            <section id="section-two">
+              <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                  <div id="form-input" class="form-inline card">
+                    <div class="card-body">
+                      
+                      <div class="form-group card-body row">
+                            <p></p>
+                        <div class="input-group mb-2 mr-sm-1 row">
+                          <input type="text" class="form-control" id="new-currency" class="col-md-4" placeholder="Currency" />
+                          <input type="text" class="form-control " id="conversion-rate" class="col-md-4" placeholder="Rate" />
+                          <small><em> <strong>NB</strong>   Rate should be at Nigeria Naira exchange rate.</em></small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="btn btn-primary col-md-4 mt-3 mb-3" type="submit" id="add-now" onclick="add()"> Add </a>
+                </div>
+                <div class="col-md-2"></div>
+                   </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </section>
+              <div class="col-md-10 mx-auto footer text-center">
+                <p>Built by <span> <a href="https://twitter.com/theTech_Gent?s=09">Opeyemi Peter.</a></span> &copy;2020. All rights
+                  reserved</p>
+              </div>
+            
+          </div>
+           
+      </div>
+    
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
